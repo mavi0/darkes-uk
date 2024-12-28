@@ -10,7 +10,7 @@ See i18n configuration in `[languages]` section of `hugo.toml`.
 
 #### Local content
 
-Localised content can be put in dedicated folder `content/de/`. Images should be naturally found from there:
+Localised content can be put in dedicated folder `content/cy/`. Images should be naturally found from there:
 ![Image from content/de ](de-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg)
 
 #### Assets

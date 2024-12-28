@@ -9,7 +9,7 @@ defaultContentLanguage = "en"
 theme = "hugo-scroll"
 
 # The browser tab name
-title = "Jane Doe - Nutrition Coach & Chef Consultant"
+title = "Darkes Architects"
 
 # In order to add version information in the page's footer set to true.
 # enableGitInfo = true
@@ -52,11 +52,11 @@ enableEmoji = true
 
     # A "copyright"-line to be added at the bottom of the page.
     # Hint: Plain HTML is supported in here as well. So you may e.g. add a link to your legal imprint-page.
-    copyright = "© Jane Doe"
+    copyright = "© Chris Darkes 2025 - See <a href='https://https://github.com/mavi0/darkes-uk'>Credits</a> and <a href='https://github.com/mavi0/darkes-uk/blob/master/LICENSE'>Licence</a>. Powered by <a href='https://github.com/zjedi/hugo-scroll'>Hugo Scroll</a>."
 
     # This theme will, by default, inject a design-by-line at the bottom of the page.
     # You can turn it off, but we would really appreciate if you don’t :-)
-    hidedesignbyline = false
+    hidedesignbyline = true
 
     # The sections of the home page alternate styling. Mark invert as true to swap the styling of the sections
     invertSectionColors = false
@@ -70,7 +70,7 @@ enableEmoji = true
 
     [params.footer]
     # Show contact icons for email/phone (if specified) in the footer of the page
-    showContactIcons = false
+    showContactIcons = true
 
     # Show links indicated with footer_menu and footer_menu_title in the footer of the page
     showFooterLinks = false
@@ -91,10 +91,10 @@ enableEmoji = true
         icon = "fa fa-envelope"
 
     [[params.contacts]]
-        label = "GitHub"
-        value = "github.com/zjedi/hugo-scroll"
-        url = "https://github.com/zjedi/hugo-scroll"
-        icon = "fa-brands fa-github"
+        label = "Whatsapp"
+        value = ""
+        url = "https://wa.me/111111"
+        icon = "fa-brands fa-whatsapp"
 
     # Add additional contacts here!
     # [[params.contacts]]
@@ -110,8 +110,8 @@ enableEmoji = true
     languageName = "English"
     contentDir = "content/en"
 
-  [languages.de]
-    title = "Erika Musterfrau - Ernährungshilfe & Kochberatung"
+  [languages.cy]
+    title = "Pensaernïaeth Darkes"
     weight = 20
-    contentDir = "content/de"
-    languageName = "Deutsch"
+    contentDir = "content/cy"
+    languageName = "Cymraeg"

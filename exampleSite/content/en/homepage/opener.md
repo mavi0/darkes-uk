@@ -3,12 +3,10 @@ title: "Welcome"
 weight: 1
 ---
 
-`Hugo-Scroll` theme alternates colors of sections that are placed on single page.
-The landing screen is meant to be visually striking.
+Welcome to **Darkes Architecture**, your trusted local partner for creating beautifully crafted spaces across North Wales. We are proud to serve the people of this region, specializing in residential architecture tailored to meet the unique needs of our local communities.
 
-Single-page approach is oriented towards small to medium content length, that won't overwhelm the user.
-You can also delegate lengthier, less important or more sizeable content to [dedicated pages](services).
+With over 30 years of experience and a deep understanding of North Wales' planning and building requirements, we offer solutions for home extensions, renovations, alterations, and new-build homes. Our commitment to quality and collaboration ensures every project reflects the character and charm of our beautiful area.
 
-> The belly rules the mind. --- spanish proverb
+> "Architecture should speak of its time and place, but yearn for timelessness." — Frank Gehry
 
-By the way this welcome section won't show in the cover menu.
+Explore our services to see how we can help you enhance your home and contribute to the fabric of North Wales.
