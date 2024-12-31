@@ -38,19 +38,19 @@ Then, adjust the `hugo.toml` as detailed below & in the file comments.
 
 ### Playing around with our example site
 
-If you simply want to check out the `exampleSite`, you can run
+If you simply want to check out the `darkes`, you can run
 
 ```cli
 git clone https://github.com/zjedi/hugo-scroll.git hugo-scroll
 cd hugo-scroll
-hugo server --source=exampleSite --themesDir=../..
+hugo server --source=darkes --themesDir=../..
 ```
 
 For more information, read the official [Hugo setup guide][hugo-setup-guide].
 
-If you are starting fresh, simply copy over the contents of the `exampleSite`-directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
+If you are starting fresh, simply copy over the contents of the `darkes`-directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
 
-Please check out the [hugo.toml](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/hugo.toml) included in the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite) of this theme.
+Please check out the [hugo.toml](https://github.com/zjedi/hugo-scroll/blob/master/darkes/hugo.toml) included in the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite) of this theme.
 
 You can add **a new section to the homepage** by running `hugo new homepage/my-new-content.md` (or craft the file manually)
 
@@ -60,7 +60,7 @@ To create **a page separate from the homepage**, run `hugo new my-new-page.md`
 
 ### Customizing CSS
 
-Add a [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html) file to your `layouts/partials` directory.
+Add a [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/darkes/layouts/partials/custom_head.html) file to your `layouts/partials` directory.
 
 - You can use `<style>` tag to embed the overrides (better performance-wise)
 - Alternatively you can `<link>` your own `custom.css`
@@ -99,11 +99,11 @@ If you want to use these branded icons in your contact list, use the full class 
 
 ### Header logo
 
-Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
+Configured in `_index.md`, see `darkes`: `header_logo: "images/chef-hat.png"`
 
 ### Video cover
 
-Set `header_use_video: true` in `/exampleSite/content/_index.md` and define video source via custom partial, such as `exampleSite/layouts/partials/custom_header_video.html`.
+Set `header_use_video: true` in `/darkes/content/_index.md` and define video source via custom partial, such as `darkes/layouts/partials/custom_header_video.html`.
 
 ### Footer version information
 
