@@ -10,7 +10,7 @@ We’d love to hear from you. Whether you’re ready to start your project or ju
 
 ---
 
-- **Email:** [info@darkesarchitecture.co.uk](mailto:info@darkesarchitecture.co.uk)
+- **Email:** [chris@darkes.uk](mailto:chris@darkes.uk)
 - **Phone:** +44 1234 567890
 - **Address:** Darkes Architecture, North Wales
 
