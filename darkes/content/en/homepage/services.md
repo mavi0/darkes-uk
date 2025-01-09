@@ -6,7 +6,7 @@ weight: 2
 header_menu: true
 ---
 
-At **Darkes Architecture**, we specialize in bringing your vision to life. From initial concept to the final construction drawings, we are with you every step of the way.
+At **Darkes Architecture**, we specialize in bringing your vision to life. From initial concept to the final completion, we can be with you every step of the way.
 
 ![Chris ](/images/screenshot.png)
 
@@ -20,10 +20,10 @@ From modernizing older homes to breathing new life into tired spaces, we special
 Starting from scratch? We'll design a unique home that reflects your taste and complements its surroundings.
 
 #### Planning and Building Regulations
-We handle the necessary planning applications and liaise with local authorities to ensure compliance with building regulations, so your project runs smoothly.
+We handle the necessary planning applications and liaise with local authorities to ensure compliance with building regulations, so that your project runs smoothly.
 
 #### Technical Drawings and Specifications
-We produce detailed technical drawings and specifications, ready for builders to turn your project into reality.
+We can produce detailed technical drawings and specifications, to assist with obtaining accurate builders quotations ready to turn your project into reality.
 
 ---
 
