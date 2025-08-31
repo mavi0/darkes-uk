@@ -15,4 +15,4 @@ We’d love to hear from you. Whether you’re ready to start your project or ju
 - **Address:** Darkes Architecture, 17 Woodlands Avenue, Rhos-on-Sea, LL28 4RU
 ---
 
-*Let’s discuss how we can bring your vision to life. Reach out today!*
+*Let’s discuss how we can bring your vision to life.*
