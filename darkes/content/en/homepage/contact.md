@@ -1,4 +1,4 @@
----
+ty---
 title: "Contact Us"
 header_menu_title: "Contact"
 navigation_menu_title: "Contact Us"
@@ -15,4 +15,4 @@ We’d love to hear from you. Whether you’re ready to start your project or ju
 - **Address:** Darkes Architecture, 17 Woodlands Avenue, Rhos-on-Sea, LL28 4RU
 ---
 
-*Let’s discuss how we can bring your vision to life.*
+*Let’s discuss how we can bring your vision to reality.*
