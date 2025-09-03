@@ -23,7 +23,7 @@ Starting from scratch? We'll help you design a unique home that reflects your ta
 We can prepare and submit planning applications and building regulations applications to gain any necessary approvals.
 
 #### Technical Drawings and Specifications
-We can produce detailed technical drawings and specifications, to assist with obtaining accurate builders quotations ready to turn your project into reality.
+We can produce detailed technical drawings and specifications, to assist with obtaining builders quotations.
 
 ---
 
