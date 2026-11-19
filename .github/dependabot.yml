@@ -1,14 +1,32 @@
 # see https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
-  - package-ecosystem: "github-actions"
+  # Base images are pinned by digest; this bumps the digest when the tag is republished
+  - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "dep(docker): "
+
+  # Grouped so only one PR edits workflow files at a time
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "dep(ci): "
+    groups:
+      github-actions:
+        patterns: ["*"]
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    commit-message:
+      prefix: "dep(npm): "
+    groups:
+      npm-minor-patch:
+        update-types: ["minor", "patch"]

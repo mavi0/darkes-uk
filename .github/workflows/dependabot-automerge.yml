@@ -1,0 +1,29 @@
+name: Dependabot Auto-merge
+
+on:
+  pull_request:
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: dependabot-automerge
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Merge PR
+        run: gh pr merge --squash --delete-branch "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Merges made with GITHUB_TOKEN don't trigger push workflows, so start the build explicitly
+      - name: Build and deploy
+        run: gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref master
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
