@@ -1,4 +1,4 @@
-FROM ghcr.io/gohugoio/hugo:v0.140.2@sha256:4349edcdfb8086fbb972fc5b52805a1ba9d40e6a287e64f06fd26a3edc68e175 AS builder
+FROM ghcr.io/gohugoio/hugo:v0.170.1@sha256:4cc9f383086c0fba180efcf7132cf2f025969c462fedf5fcd2bf921915416797 AS builder
 USER root
 WORKDIR /hugo-scroll
 COPY . /hugo-scroll
