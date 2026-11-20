@@ -1,0 +1,30 @@
+name: Dependabot Auto-merge
+
+on:
+  pull_request:
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+# Merge one Dependabot PR at a time so they don't race each other
+concurrency:
+  group: dependabot-automerge
+
+jobs:
+  automerge:
+    name: Merge and Rebuild
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Merge PR
+        run: gh pr merge --squash --delete-branch "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Merges made with GITHUB_TOKEN don't trigger push workflows, so dispatch the build
+      - name: Trigger Docker Build
+        run: gh workflow run docker.yaml --repo "$GITHUB_REPOSITORY" --ref master
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

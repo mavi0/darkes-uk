@@ -1,41 +1,52 @@
-# Darkes Architecture
+# darkes.uk
 
-The website for Darkes Architecture. It is a single-page [Hugo](https://gohugo.io/) site that uses the [Hugo Scroll](https://github.com/zjedi/hugo-scroll) theme.
+This repository holds the website of Darkes Architecture. The site is one page of plain HTML and CSS. It has no framework, no JavaScript and no build step. Nginx serves it from a Docker image.
 
-## Layout
+## Files
 
-- `darkes/` holds the site: `hugo.toml`, the content, images and site-specific partials.
-- `darkes/content/en/` holds the English pages. Each file in `homepage/` is one section of the home page.
-- The repository root is the Hugo Scroll theme (`layouts/`, `assets/`).
+| Path | Contents |
+|---|---|
+| `static-site/index.html` | The whole page |
+| `static-site/assets/css/site.css` | The only stylesheet |
+| `static-site/assets/img/` | Photos and the link preview image |
+| `static-site/assets/images/favicon/` | Favicons |
+| `static-site/assets/fonts/` | Self-hosted Montserrat, with its licence |
+| `Dockerfile` | The Nginx image that serves `static-site/` |
 
-## Run locally
+The logo in the header is an inline SVG in `index.html`.
 
-You need the extended version of Hugo. Run this from the repository root:
+## Run it locally
+
+To preview the files directly, start any static server:
 
 ```sh
-hugo server --source=darkes --themesDir=../..
+python3 -m http.server 8080 --directory static-site
 ```
 
-To add a section to the home page, add a Markdown file to `darkes/content/en/homepage/`.
+To run the same image that production uses, build it with Docker:
 
-## Build and deploy
+```sh
+docker build -t darkes-uk .
+docker run --rm -p 8080:80 darkes-uk
+```
 
-CI builds a Docker image when a commit lands on `master`. The image builds the site with Hugo and serves it with nginx. CI pushes the image to `ghcr.io/mavi0/darkes-uk:latest`. The host pulls that image.
+Then open <http://localhost:8080>.
 
-Pull requests build the image but do not push it.
+## Deployment
 
-## Dependency updates
+Every push to `master` starts the Docker workflow. The workflow builds the image for `linux/amd64` and `linux/arm64` and pushes it to `ghcr.io/mavi0/darkes-uk:latest`.
 
-Dependabot keeps the dependencies current without manual work:
+## Updates
 
-- The base images in the `Dockerfile` are pinned by digest. Dependabot updates the digest every day.
-- Dependabot groups the GitHub Actions updates into one weekly PR, and the npm minor and patch updates into another.
-- A workflow merges each Dependabot PR and then starts the build, so the update deploys.
+The image uses `nginx:stable-alpine-slim`, pinned by digest. Dependabot checks the tag every day. When the Nginx maintainers publish a new image for that tag, Dependabot opens a PR that changes the digest.
 
-Auto-merge does not wait for the PR build. If an update breaks the build, the site keeps its last good image until someone fixes `master`.
+Dependabot also opens one grouped PR each week for GitHub Actions updates.
+
+The `dependabot-automerge.yaml` workflow merges each Dependabot PR. A merge made with `GITHUB_TOKEN` does not start push workflows, so the workflow then starts the Docker build itself.
+
+On 2 January each year, the `update-year.yaml` workflow updates the year in the footer.
 
 ## Credits
 
-- [Jan Raasch](https://www.janraasch.com) and [zjedi](https://github.com/zjedi/hugo-scroll) wrote the Hugo Scroll theme.
-- The theme is based on [GhostScroll](https://github.com/grmmph/GhostScroll) by Yonatan Wolowelsky.
-- Stock photos are from [Pexels](https://www.pexels.com) and [Unsplash](https://unsplash.com).
+- The drafting photo is by [Ryan Ancill on Unsplash](https://unsplash.com/photos/nGsVMkRatgM), under the [Unsplash Licence](https://unsplash.com/license).
+- Montserrat is under the [SIL Open Font Licence](static-site/assets/fonts/montserrat-OFL.txt).
